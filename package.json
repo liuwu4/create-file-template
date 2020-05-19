@@ -1,0 +1,25 @@
+{
+  "name": "create-file-template",
+  "version": "0.0.1",
+  "description": "第一次发布",
+  "main": "index.js",
+  "bin": {
+    "fileStart": "bin/start.js"
+  },
+  "scripts": {
+    "test": "yarn fileStart profile"
+  },
+  "keywords": [
+    "cli",
+    "file",
+    "template"
+  ],
+  "author": "liuwu4",
+  "license": "ISC",
+  "dependencies": {
+    "clear": "^0.1.0",
+    "figlet": "^1.4.0",
+    "inquirer": "^7.1.0"
+  },
+  "devDependencies": {}
+}
