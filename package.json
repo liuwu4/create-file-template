@@ -4,7 +4,7 @@
   "description": "第一次发布",
   "main": "index.js",
   "bin": {
-    "fileStart": "bin/start.js"
+    "create-template": "bin/start.js"
   },
   "scripts": {
     "test": "yarn fileStart profile"
@@ -22,6 +22,7 @@
     "inquirer": "^7.1.0"
   },
   "devDependencies": {
+    "chalk": "^4.0.0",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.3"
   }
