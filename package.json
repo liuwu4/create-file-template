@@ -6,9 +6,6 @@
   "bin": {
     "create-template": "bin/start.js"
   },
-  "scripts": {
-    "test": "yarn fileStart profile"
-  },
   "keywords": [
     "cli",
     "file",
