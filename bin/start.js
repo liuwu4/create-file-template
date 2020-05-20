@@ -4,7 +4,7 @@ const path = require('path');
 const clear = require('clear');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const dirname = path.resolve('./');
+const dirname = (dir) => path.resolve('./', dir);
 const argv0 = process.argv.slice(2);
 const defaultValue = ['react', 'react-native'];
 const defaultComponent = ['class', 'function'];
@@ -39,29 +39,34 @@ const questions = [
         }
     }];
 inquirer.prompt(questions).then(response => {
-    isExists(argv0, Object.values(response).join('\\'));
+  const inputFileName =Object.values(response).join('/');
+  const generateFomat = path.format({
+    dir: argv0.join('/'),
+    name: 'index.js'
+  });
+  const templateFormat = path.format({
+    dir: path.resolve(__dirname, `../${inputFileName}`),
+    name: 'index.js'
+  });
+  isExists(generateFomat, templateFormat);
 });
 
-function isExists(filename = [], sourcePath) {
-    let mergePath = dirname;
-    filename.forEach(item => {
-        mergePath = `${mergePath}\\${item}`;
-        console.log("mergePath", mergePath);
-        fs.exists(mergePath, function (exists) {
-            if (!exists) {
-                fs.mkdirSync(mergePath, function (success) {
-                    if (success) {
-                        console.error(`error:${success}`);
-                    }
-                });
-            }
-            fs.copyFile(`${sourcePath}\\index.js`, `${mergePath}\\index.js`, function (error) {
-                console.log('error:', error);
-                if (error) {
-                    console.error(`errops:${error}`);
-                }
-            });
-        })
+function isExists(generate = {}, template = {}) {
+    const parsePath  = path.parse(generate);
+    const { dir } = parsePath;
+    fs.exists(dirname(dir), function(exists){
+      if(!exists){
+        fs.mkdir(dirname(dir), function(success){
+          if(success){
+            throw success;
+          }
+        });
+      }
+      fs.copyFile(template, dirname(path.format(parsePath)), function(error){
+          if(error){
+            throw error;
+          }
+        });
     });
 }
 
