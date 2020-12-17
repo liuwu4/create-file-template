@@ -1,0 +1,68 @@
+Arguments: 
+  /Users/yujie/.nvm/versions/node/v11.13.0/bin/node /Users/yujie/.nvm/versions/node/v11.13.0/bin/yarn
+
+PATH: 
+  /usr/local/opt/openssl@1.1/bin:./node_modules/.bin:/Users/yujie/Library/Android/sdk/platform-tools:/Users/yujie/.nvm/versions/node/v11.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yujie/Library/Android/sdk/tools:/Users/yujie/Library/Android/sdk/platform-tools:/Users/yujie/Library/Android/sdk/tools:/Users/yujie/Library/Android/sdk/platform-tools:/usr/local/Cellar/gradle/5.4.1/bin:/Users/yujie/goworks/bin:/Users/yujie/Library/Android/sdk/tools:/Users/yujie/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  11.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npmjs.org/typescript: ETIMEDOUT
+      at Timeout._onTimeout (/Users/yujie/.nvm/versions/node/v11.13.0/lib/node_modules/yarn/lib/cli.js:130250:19)
+      at listOnTimeout (internal/timers.js:535:17)
+      at processTimers (internal/timers.js:479:7)
+
+npm manifest: 
+  {
+    "name": "create-file-template",
+    "version": "0.0.3",
+    "description": "测试github链接npm",
+    "main": "index.js",
+    "bin": {
+      "create-template": "bin/start.js"
+    },
+    "keywords": [
+      "cli",
+      "file",
+      "template"
+    ],
+    "author": "liuwu4",
+    "license": "ISC",
+    "dependencies": {
+      "clear": "^0.1.0",
+      "figlet": "^1.4.0",
+      "inquirer": "^7.1.0"
+    },
+    "devDependencies": {
+      "chalk": "^4.0.0",
+      "ts-node": "^8.10.1",
+      "typescript": "^3.9.3"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/liuwu4/create-file-template.git"
+    },
+    "publishConfig": {
+      "registry": "https://npm.pkg.github.com"
+    },
+    "bugs": {
+      "url": "https://github.com/liuwu4/create-file-template/issues"
+    },
+    "homepage": "https://github.com/liuwu4/create-file-template#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
