@@ -4,9 +4,6 @@
 name: npm_ci
 
 on:
-   pull_request:  
-    branches:  
-      - master
   push:
     branches:
       - develop
