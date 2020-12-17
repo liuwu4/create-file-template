@@ -30,9 +30,6 @@
     "type": "git",
     "url": "git+https://github.com/liuwu4/create-file-template.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "bugs": {
     "url": "https://github.com/liuwu4/create-file-template/issues"
   },
