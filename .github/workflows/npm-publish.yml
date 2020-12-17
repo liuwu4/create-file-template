@@ -9,6 +9,10 @@ on:
       - develop
 
 jobs:
+  npm_task:
+    runs-on: ubuntu-latest
+    steps:
+      -run: npm -v
   publish-npm:
     runs-on: ubuntu-latest
     steps:
