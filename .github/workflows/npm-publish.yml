@@ -12,7 +12,9 @@ jobs:
   npm_task:
     runs-on: ubuntu-latest
     steps:
-      -run: npm -v
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm -v
   publish-npm:
     runs-on: ubuntu-latest
     steps:
