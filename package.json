@@ -1,7 +1,7 @@
 {
   "name": "create-file-template",
-  "version": "0.0.2",
-  "description": "校验是否输入了文件名, 提取方法",
+  "version": "0.0.3",
+  "description": "测试github链接npm",
   "main": "index.js",
   "bin": {
     "create-template": "bin/start.js"
@@ -29,6 +29,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liuwu4/create-file-template.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "bugs": {
     "url": "https://github.com/liuwu4/create-file-template/issues"
