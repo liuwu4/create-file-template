@@ -6,7 +6,7 @@ name: npm_ci
 on:
   push:
     branches:
-      - developer
+      - develop
 
 jobs:
   build:
